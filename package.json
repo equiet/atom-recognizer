@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "See the status of your apps in real time",
   "keywords": [],
-  "repository": "https://github.com/atom/recognizer",
+  "repository": "https://github.com/equiet/atom-recognizer",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
