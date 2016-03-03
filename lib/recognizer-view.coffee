@@ -40,7 +40,11 @@ class RecognizerView
 
     # Show only markers belonging to a currently opened file
     currentFilename = @editor?.buffer?.file.path
-    functions = functions.filter((f) -> currentFilename.indexOf(f.filename) != -1)
+
+    # If some other window is open, for example Search or Settings
+    return if !currentFilename
+
+    functions = functions.filter((f) -> currentFilename?.indexOf(f.filename) != -1)
 
     for {filename, location, hitCount} in functions
       @addMarker(location, hitCount)
